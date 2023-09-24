@@ -40,7 +40,7 @@ export class ExpressApp {
     this.app.use(express.static("public"));
     this.app.use(express.json());
     this.app.use(express.urlencoded({ extended: false }));
-    this.app.use(globalErrorHandle)
+    this.app.use(globalErrorHandle);
   }
 
   #setupEngine() {

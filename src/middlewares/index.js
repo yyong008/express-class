@@ -1,5 +1,5 @@
-import globalErrorHandle from './modules/global';
+import globalErrorHandle from "./modules/global";
 
 export default {
-  globalErrorHandle
-}
+  globalErrorHandle,
+};
