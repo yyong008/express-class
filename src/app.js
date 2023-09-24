@@ -3,6 +3,7 @@ import cookieParser from "cookie-parser";
 import session from "express-session";
 import mustacheExpress from "mustache-express";
 import helmet from "helmet";
+import compression from 'compression'
 
 import { toAbsolutePath } from "./utils/index.js";
 
@@ -44,6 +45,7 @@ export class ExpressApp {
     this.app.use(express.json());
     this.app.use(express.urlencoded({ extended: false }));
     this.app.use(globalErrorHandle);
+    this.app.use(compression())
     this.app.use(cookieParser());
     this.app.use(
       session({
