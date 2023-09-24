@@ -1,5 +1,5 @@
 import express from "express";
-import { UserRoute,  } from "./modules/user.js";
+import { UserRoute } from "./modules/user.js";
 
 export class AppRoutes {
   constructor() {

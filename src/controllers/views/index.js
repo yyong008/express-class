@@ -11,7 +11,7 @@ export class RenderViewController {
    * @param {import('express').NextFunction} next
    */
   renderHome(req, res) {
-    res.render('home', { title: 'Ex - Home', content: 'Hello, World!' })
+    res.render("home", { title: "Ex - Home", content: "Hello, World!" });
   }
 
   /**
@@ -21,6 +21,6 @@ export class RenderViewController {
    * @param {import('express').NextFunction} next
    */
   renderAbout(req, res) {
-    res.render('about', { title: 'Ex- about', content: 'Hello, About!' })
+    res.render("about", { title: "Ex- about", content: "Hello, About!" });
   }
 }

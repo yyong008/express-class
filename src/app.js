@@ -2,16 +2,15 @@ import express from "express";
 
 import mustacheExpress from "mustache-express";
 
-import { toAbsolutePath } from './utils/index.js'
+import { toAbsolutePath } from "./utils/index.js";
 
 import { AppRoutes } from "./routes/index.js";
 import { AppConfig } from "./config.js";
-import { RenderViewController } from './controllers/views/index.js'
+import { RenderViewController } from "./controllers/views/index.js";
 
 export class ExpressApp {
   constructor() {
     this.#init();
-    
   }
 
   #init() {
@@ -25,9 +24,9 @@ export class ExpressApp {
   }
 
   #setupViewRoutes() {
-    const controller = new RenderViewController()
-    this.app.get('/', controller.renderHome)
-    this.app.get('/about', controller.renderAbout)
+    const controller = new RenderViewController();
+    this.app.get("/", controller.renderHome);
+    this.app.get("/about", controller.renderAbout);
   }
 
   #setupApiRoutes() {
@@ -41,7 +40,7 @@ export class ExpressApp {
   }
 
   #setupEngine() {
-    this.app.engine('mustache', mustacheExpress())
+    this.app.engine("mustache", mustacheExpress());
     this.app.set("view engine", "mustache");
     this.app.set("views", toAbsolutePath("../views"));
   }
