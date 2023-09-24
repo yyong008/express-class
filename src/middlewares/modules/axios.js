@@ -1,11 +1,11 @@
-import axios from 'axios';
+import axios from "axios";
 
 // 创建一个 Axios 实例，可以根据需要配置
 const axiosInstance = axios.create({
-  baseURL: '', // 设置基本URL
+  baseURL: "", // 设置基本URL
   timeout: 5000, // 设置请求超时时间
   headers: {
-    'Content-Type': 'application/json', // 设置默认请求头
+    "Content-Type": "application/json", // 设置默认请求头
   },
 });
 
