@@ -52,15 +52,12 @@
 
 # mongodb
 
-- prisma
-- typeORM
-- ...
+- [x] prisma
 
 ## docker
 
-- pm2
-- dockerfile
-- docker-compose
+- [x] dockerfile
+- [x] docker-compose
 
 ## upload
 
