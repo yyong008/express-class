@@ -1,4 +1,4 @@
-import { z, ZodError } from 'zod';
+import { z, ZodError } from "zod";
 
 // 定义数据验证模式，例如验证一个用户的数据
 const userSchema = z.object({
@@ -22,7 +22,7 @@ function validateData(schema) {
         res.status(400).json({ error: error.message });
       } else {
         // 处理其他类型的错误
-        res.status(500).json({ error: '内部服务器错误' });
+        res.status(500).json({ error: "内部服务器错误" });
       }
     }
   };
