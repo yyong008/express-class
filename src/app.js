@@ -2,6 +2,7 @@ import express from "express";
 import cookieParser from "cookie-parser";
 import session from "express-session";
 import mustacheExpress from "mustache-express";
+import helmet from 'helmet';
 
 import { toAbsolutePath } from "./utils/index.js";
 
@@ -38,6 +39,7 @@ export class ExpressApp {
   }
 
   #setupMiddleware() {
+    this.app.use(helmet())
     this.app.use(express.static("public"));
     this.app.use(express.json());
     this.app.use(express.urlencoded({ extended: false }));
