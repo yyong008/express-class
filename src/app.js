@@ -8,6 +8,9 @@ import { AppRoutes } from "./routes/index.js";
 import { AppConfig } from "./config.js";
 import { RenderViewController } from "./controllers/views/index.js";
 
+// middlewares
+import globalErrorHandle from "./middlewares/modules/global.js";
+
 export class ExpressApp {
   constructor() {
     this.#init();
@@ -37,6 +40,7 @@ export class ExpressApp {
     this.app.use(express.static("public"));
     this.app.use(express.json());
     this.app.use(express.urlencoded({ extended: false }));
+    this.app.use(globalErrorHandle)
   }
 
   #setupEngine() {
