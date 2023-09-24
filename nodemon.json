@@ -1,0 +1,8 @@
+{
+  "restartable": "rs",
+  "verbose": true,
+  "ignore": ["*.test.js", "fixtures/*", "node_modules"],
+  "watch": ["static/*", "views/*", "**/*.ts"],
+  "exec": "node ./src/index.js",
+  "ext": "ts ejs yml json mustache css"
+}

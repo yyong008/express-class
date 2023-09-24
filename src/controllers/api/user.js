@@ -10,7 +10,7 @@ export class UserController {
    * @param {import('express').Response} res
    * @param {import('express').NextFunction} next
    */
-  createUser(req, res, next) {
+  createUser(req, res) {
     res.status(200).json({
       code: 0,
       message: "success",

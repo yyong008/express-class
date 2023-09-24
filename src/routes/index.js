@@ -1,5 +1,5 @@
 import express from "express";
-import { UserRoute } from "./modules/user.js";
+import { UserRoute,  } from "./modules/user.js";
 
 export class AppRoutes {
   constructor() {
@@ -7,6 +7,7 @@ export class AppRoutes {
   }
 
   #init() {
+    this.viewsRouter = express.Router();
     this.router = express.Router();
     this.#setupRoutes();
   }
