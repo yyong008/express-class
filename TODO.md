@@ -6,6 +6,7 @@
 
 ## staic
 
+- [x] static in files
 ## body
 
 - [ ] add bodyparser 
