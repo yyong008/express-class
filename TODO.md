@@ -1,5 +1,9 @@
 # TODO
 
+## watch
+
+- [x] nodemon start
+
 ## staic
 
 ## body
