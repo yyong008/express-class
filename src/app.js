@@ -1,5 +1,6 @@
 import express from "express";
-
+import cookieParser from "cookie-parser";
+import session from "express-session";
 import mustacheExpress from "mustache-express";
 
 import { toAbsolutePath } from "./utils/index.js";
@@ -41,6 +42,17 @@ export class ExpressApp {
     this.app.use(express.json());
     this.app.use(express.urlencoded({ extended: false }));
     this.app.use(globalErrorHandle);
+    this.app.use(cookieParser());
+    this.app.use(
+      session({
+        secret: "your-secret-key", // 用于签名 Session ID 的秘密字符串
+        resave: false, // 如果为 true，则每次请求都重新保存 Session
+        saveUninitialized: false, // 如果为 true，则将在没有初始化的情况下创建 Session
+        cookie: {
+          maxAge: 60 * 60 * 1000, // Session 的最大存活时间（以毫秒为单位）
+        },
+      }),
+    );
   }
 
   #setupEngine() {

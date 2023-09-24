@@ -13,7 +13,7 @@
 
 ## http
 
-- [ ] add axios to node request
+- [x] add axios and with in req.axios
 
 ## vidate
 
@@ -28,7 +28,7 @@
 
 
 - [ ] global error node
-- [ ] global error middleware
+- [x] global error middleware
 - [ ] other errors types
 - [ ] api errors
 
