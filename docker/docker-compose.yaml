@@ -1,0 +1,33 @@
+version: '3'
+
+services:
+  mongodb-primary:
+    image: mongo:latest
+    container_name: mongodb-primary
+    ports:
+      - "27017:27017"
+    command: mongod --replSet rs0
+    networks:
+      - my-network
+
+  mongodb-secondary:
+    image: mongo:latest
+    container_name: mongodb-secondary
+    depends_on:
+      - mongodb-primary
+    command: mongod --replSet rs0
+    networks:
+      - my-network
+
+  mongodb-arbiter:
+    image: mongo:latest
+    container_name: mongodb-arbiter
+    depends_on:
+      - mongodb-primary
+    command: mongod --replSet rs0 --oplogSize 128
+    networks:
+      - my-network
+
+networks:
+  my-network:
+    driver: bridge
