@@ -9,7 +9,7 @@
 - [x] static in files
 ## body
 
-- [ ] add bodyparser 
+- [x] add bodyparser 
 
 ## http
 
@@ -17,7 +17,7 @@
 
 ## vidate
 
-- [ ] add zod/joi/express-validate to validate 
+- [x] zod demo
 
 ## cookie and jwt
 
